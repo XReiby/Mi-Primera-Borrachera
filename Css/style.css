@@ -1,0 +1,132 @@
+body {
+    background: url(../Fondo/FondoIndex.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+.logo {
+    width: 45%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 22px;
+    color: #3e1c10;
+    margin-bottom: 2rem;
+}
+
+.form-div, .logo-div {
+    margin: 0;
+    position: relative;
+    flex-basis: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.90);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 38px;
+    width: 400px;
+    text-align: center;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-container input {
+    font-size: 18px;
+    padding: 22px;
+    padding-left: 50px;
+    width: 90%;
+    border: 2px solid #803b17;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: serif;
+}
+
+.input-container input[type="text"] {
+    background-image: url('../Icono/Usuario.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+}
+
+.input-container input[type="password"] {
+    background-image: url('../Icono/Contraseña.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+}
+
+.login-button {
+    padding: 16px 66px;
+    background-color: #803b17;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    width: fit-content;
+    margin: auto;
+    display: block;
+    font-size: 18px;
+    font-family: serif;
+}
+
+.login-button:hover {
+    background-color: #3e1c10;
+}
+
+.contenedor-principal {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-div {
+    flex-direction: column;
+}
+
+.logo-div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.Icono {
+    max-width: 80%;
+}
+
+.div-logo {
+    position: absolute;
+}

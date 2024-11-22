@@ -1,0 +1,202 @@
+/* Estilos generales */
+body, html {
+    background-image: url('../../Fondo/Cajero/FondoInvC.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/* Contenedor principal para centrar el contenido */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna si es necesario */
+    justify-content: flex-start; /* Cambiar a flex-start para evitar que el contenido esté centrado verticalmente */
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura */
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    position: static;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 80px;
+}
+
+/* Icono */
+header img.Icono {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+header img.Icono:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.icono-link {
+    margin-left: auto;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    margin-top: 3%;
+}
+
+/* Campos de entrada */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Estilo de las etiquetas */
+label {
+    font-weight: bold;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: red;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Botones */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.back-btn,
+.submit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.back-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.back-btn:hover {
+    background-color: #d32f2f;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #388E3C;
+}
+
+/* Estilo del dropdown */
+#dropdown-content {
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    margin-top: 5px;
+    top: 20%;
+    left: 3%;
+    color: #000;
+}
+
+h3 {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin-top: 120px;
+    }
+
+    .header h2 {
+        font-size: 2rem;
+    }
+
+    header img.Icono {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .button-group {
+        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+    }
+
+    .back-btn,
+    .submit-btn {
+        width: 100%; /* Hacer los botones más anchos en pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,239 @@
+/* Estilos generales */
+body {
+    background-image: url('../../Fondo/Cajero/FondoCierrePedidos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/* Contenedor principal para centrar el contenido */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro del header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    position: static;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 80px;
+}
+
+header img.Icono {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+header img.Icono:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.icono-link {
+    margin-left: auto;
+}
+
+/* Contenedor del carrusel de pedidos */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1800px; /* Aumenté el tamaño del contenedor */
+    margin: auto;
+}
+
+/* Contenedor de los pedidos (carrusel) */
+.pedidos-abiertos {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que los pedidos se alineen verticalmente */
+    justify-content: flex-start; /* Alinea los pedidos a la izquierda */
+    gap: 20px; /* Aumenté el espaciado entre las tarjetas */
+    scroll-snap-type: x mandatory; /* Alineación fluida al desplazarse */
+    padding-bottom: 20px; /* Espacio extra para el desplazamiento */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+
+/* Tarjetas del pedido */
+.pedido-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33.333% - 20px); /* Aumenté el tamaño de las tarjetas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    scroll-snap-align: start; /* Alineación de las tarjetas al desplazar */
+}
+
+.pedido-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Espaciado entre total y cerrar */
+.mesa-total, .btn-cerrar {
+    margin: 8px 0; /* Espacio igual entre elementos */
+}
+
+/* Botón de cerrar pedido */
+.btn-cerrar {
+    background-color: #9f4c1b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+    text-decoration: none; /* Remover la subrayado */
+}
+
+.btn-cerrar:hover {
+    background-color: #803b17;
+}
+
+/* Controles de navegación (flechas) */
+.flechas-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre las flechas */
+    margin-top: 20px; /* Separar las flechas del contenedor */
+}
+
+.flecha {
+    font-size: 2.5em; /* Aumenté el tamaño de las flechas */
+    cursor: pointer;
+    color: #9f4c1b;
+}
+
+.carousel-prev, .carousel-next {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 2.5em; /* Tamaño aumentado */
+    cursor: pointer;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para el dropdown de usuario */
+#toggle-title {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#toggle-title:hover + #dropdown-content {
+    display: block;
+}
+
+#dropdown-content {
+    display: none; /* Mantiene el dropdown oculto por defecto */
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Mantiene el dropdown en posición absoluta */
+    z-index: 1;
+    width: 160px;
+    margin-top: 5px;
+    top: 4%;
+    left: 10%;
+    color: black;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+h3 {
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 20px;
+    position: relative;
+}
+
+h3:hover {
+    color: #9f4c1b;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #9f4c1b;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: #803b17;
+}
+
+/* Estilo del mensaje de éxito */
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .header h2 {
+        font-size: 40px;
+    }
+
+    .pedido-card {
+        width: 90%;
+    }
+
+    .btn-cerrar {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

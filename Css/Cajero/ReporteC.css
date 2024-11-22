@@ -1,0 +1,260 @@
+/* Estilos generales */
+body, html {
+    background-image: url('../../Fondo/Cajero/FondoRC.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/* Contenedor principal para centrar el contenido */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna si es necesario */
+    justify-content: flex-start; /* Cambiar a flex-start para evitar que el contenido esté centrado verticalmente */
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura */
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 50px;
+}
+
+/* Icono */
+header img.Icono {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+header img.Icono:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.icono-link {
+    margin-left: auto;
+}
+
+/* Contenedores */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px; /* Espacio entre las tarjetas */
+    padding: 250px 20px 20px;
+    max-width: 1600px;
+    margin: auto;
+    align-items: center;
+}
+
+/* Formulario de generación de reportes */
+#reporteForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
+    width: 80%;
+    max-width: 400px; /* Aumentado para permitir más espacio */
+}
+
+.fecha-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0; /* Espacio alrededor del contenedor */
+}
+
+.fecha-item {
+    width: 120px; /* Ajustar el ancho para que quepan dos en una fila */
+}
+
+.fecha-item:first-child {
+    margin-right: 40px; /* Espacio entre los dos campos de fecha */
+}
+
+#reporteForm label {
+    font-size: 18px;
+    margin: 15px 0 5px;
+    color: #000000;
+}
+
+#reporteForm input[type="date"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #9f4c1b;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#reporteForm button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #9f4c1b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reporteForm button:hover {
+    background-color: #803b17;
+}
+
+/* Tabla de resultados */
+#tabla-resultados {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    overflow-x: auto;
+}
+
+#tabla-resultados table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+#tabla-resultados th, #tabla-resultados td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#tabla-resultados th {
+    background-color: #9f4c1b;
+    color: white;
+    font-weight: bold;
+}
+
+#tabla-resultados tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Botones de exportación */
+button {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #9f4c1b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #803b17;
+}
+
+.volver-boton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #9f4c1b;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.volver-boton:hover {
+    background-color: #803b17;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 90%; /* Ajustar el ancho en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilo mejorado para el desplegable */
+#dropdown-content {
+    display: none; /* Mantiene el dropdown oculto por defecto */
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Mantiene el dropdown en posición absoluta */
+    z-index: 1;
+    width: 160px;
+    margin-top: 5px; /* Espacio entre el botón y el dropdown */
+    top: 12%; /* Cambiar a 0 para alinearlo con el elemento que lo activa */
+    left: 10%; /* Posiciona el dropdown a la derecha del elemento que lo activa */
+    color: black;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+h3 {
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 20px;
+    position: relative;
+}
+
+h3:hover {
+    color: #9f4c1b; /* Cambia a un color diferente en hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #9f4c1b; /* Cambia a un color diferente en hover */
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: #803b17; /* Color al pasar el mouse */
+}

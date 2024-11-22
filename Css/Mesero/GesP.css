@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+:root{
+    --blanco1: rgba(255,255,255,0.3);
+    --blanco2: rgba(255,255,255,0.7);
+    --cafe: #803b17;
+    --buttonColor: rgb(121, 25, 1);
+    --negro1: rgba(0,0,0,0.15);
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+body{
+    background-image: url(../../Fondo/Mesero/FondoGPM.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+        width: 100px;
+        height: auto;
+        background-color: var(--negro1);
+        border-radius: 50%;
+        padding: 10px;
+        &:hover{
+            transform: scale(1.02);
+            transition: 0.3s;
+        }
+    }
+    ul li{
+        list-style: none;
+    }
+    h3{
+        background-color: rgba(0,0,0,0.15);
+        text-align: center;
+        color: white;
+        padding: 15px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.3);
+    padding: 20px;
+    border-radius: 20px;  
+}
+
+table{
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--blanco2);
+    border-collapse: collapse;
+    text-align: center;
+    border-color: var(--buttonColor);
+    thead{
+        font-weight: 700;
+    }
+    th{
+        background-color: var(--buttonColor);
+        color: white;
+    }
+    td{
+        padding: 10px;
+    }
+    tbody button{
+        padding: 5px 10px;
+        background-color: var(--buttonColor);
+        color: white;
+        border: 0;
+        border-radius: 20px;
+        cursor: pointer;
+        &:hover{background-color: #803b17;}
+        &:disabled{background-color: rgba(121, 25, 1, 0.329)}
+    }
+}
+
+h2{
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    text-shadow: 1px 0 0 #803b17;
+    font-size: 50px;
+}
+
+.volver{
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    width: 100px;
+    background-color: var(--buttonColor);
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    font-size: 14px;
+    display: block;
+    margin: 10px auto;
+}
+.volver:hover{
+    background-color: #000; color: white;
+}
+
+#dropdown-content {
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    margin-top: 5px;
+    top: 20%;
+    left: 3%; 
+    color: #000; 
+}
+
+h3 {
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0;            
+    margin: 0;             
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}

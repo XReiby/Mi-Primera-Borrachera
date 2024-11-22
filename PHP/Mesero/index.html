@@ -1,0 +1,92 @@
+<?php
+session_start();
+error_reporting(0);
+if($_SESSION['usuario']==NULL){
+    header("location: ../../Login.php?error=2");
+    die();
+}elseif($_SESSION['rol']=='Cajero'){
+    header("location: ../../Index.php");
+    die();
+}
+
+include '../../IC/Conexion.php';
+
+
+// Consulta de inventario NO IMPRIME NADA YA QUE NO HAY INVENTARIO
+$inventario = mysqli_query($conn, "SELECT * FROM inventario WHERE sede='$_SESSION[sede]'");
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Inventario</title>
+    <link rel="stylesheet" href="../../Css/Mesero/ConsultaIM.css">
+    <link rel="icon" href="../../Icono/Mesero/ConsultaIM.png">
+    <script src="../../JS/Desplegable.js"></script>
+</head>
+
+<body>
+    <div class="main-container"> <!-- Contenedor principal -->
+        <header class="header">
+            <h3 id="toggle-title"><?php echo $_SESSION['usuario']?></h3>
+            <div id="dropdown-content">
+                <ul>
+                    <li><?php echo $_SESSION['sede']?></li>
+                    <li><?php echo $_SESSION['rol']?></li>
+                    <li><a href="Cerrar_Sesion.php">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+            <h2>Consulta de Inventario</h2>
+            <a href="../../Index.php" class="icono-link">
+                <img src="../../Icono/Icono.png" alt="Mi Primera Borrachera Logo" class="Icono">
+            </a>
+        </header>
+        <main>
+        <div class="container">
+            <div class="buscador">
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Buscar Producto">
+                    <button type="submit"><img src="../../Fondo/Mesero/magnifying-glass-solid.svg" alt=""></button>
+                </form>
+            </div>
+            <table border="1">
+                <thead>
+                    <tr colspan="5">
+                        <th colspan="5">
+                            Inventario Disponible
+                        </th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <td>Nombre Producto</td>
+                        <td>Cantidad Disponible</td>
+                        <td>Precio</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Cerveza Poker
+                        </td>
+                        <td>
+                            20
+                        </td>
+                        <td>
+                            6.000
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="botonescontainer">
+            <button class="volver">Volver</button>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+/* Estilos generales */
+body, html {
+    background-image: url('../../Fondo/Cajero/FondoGC.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/* Contenedor principal para centrar el contenido */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna si es necesario */
+    justify-content: flex-start; /* Cambiar a flex-start para evitar que el contenido esté centrado verticalmente */
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura */
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 80px;
+}
+
+/* Icono */
+header img.Icono {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+header img.Icono:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.icono-link {
+    margin-left: auto;
+}
+
+/* Contenedores */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px; /* Espacio entre las tarjetas */
+    padding: 250px 20px 20px;
+    max-width: 1600px;
+    margin: auto;
+    align-items: center;
+}
+
+/* Items con imágenes */
+.item {
+    position: relative;
+    height: 400px; /* Mantener la misma altura para todas */
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05); /* Efecto hover */
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Diferentes anchos para cada tarjeta */
+.cierre-pedidos {
+    width: 340px; /* Tamaño pequeño */
+}
+
+.alimentacion-inventario {
+    width: 420px; /* Tamaño mediano */
+}
+
+.reportes-ventas {
+    width: 340px; /* Tamaño grande */
+}
+
+/* Overlay centrado */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+    height: auto;
+}
+
+.overlay p {
+    margin: 0;
+}
+
+/* Estilo específico para cada tarjeta */
+.cierre-pedidos, .alimentacion-inventario, .reportes-ventas {
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cierre-pedidos:hover, .alimentacion-inventario:hover, .reportes-ventas:hover {
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 90%; /* Ajustar el ancho en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilo mejorado para el desplegable */
+#dropdown-content {
+    display: none; /* Mantiene el dropdown oculto por defecto */
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Mantiene el dropdown en posición absoluta */
+    z-index: 1;
+    width: 160px;
+    margin-top: 5px; /* Espacio entre el botón y el dropdown */
+    top: 12%; /* Cambiar a 0 para alinearlo con el elemento que lo activa */
+    left: 10%; /* Posiciona el dropdown a la derecha del elemento que lo activa */
+    color: black;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+h3 {
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 20px;
+    position: relative;
+}
+
+h3:hover {
+    color: #9f4c1b; /* Cambia a un color diferente en hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #9f4c1b; /* Cambia a un color diferente en hover */
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: #803b17; /* Color al pasar el mouse */
+}

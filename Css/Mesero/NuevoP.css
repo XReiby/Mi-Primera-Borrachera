@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+    --blanco1: rgba(255, 255, 255, 0.3);
+    --blanco2: rgba(255, 255, 255, 0.7);
+    --cafe: #803b17;
+    --buttonColor: #791901;
+    --negro1: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+body {
+    background-image: url(../../Fondo/Cajero/FondoCierrePedidos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 100px;
+        height: auto;
+        background-color: var(--negro1);
+        border-radius: 50%;
+        padding: 10px;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    h2 {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 15px;
+        border-radius: 20px;
+        text-shadow: 1px 0 0 #803b17;
+    }
+
+    h3 {
+        background-color: rgba(0, 0, 0, 0.15);
+        text-align: center;
+        color: white;
+        padding: 15px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+
+    select {
+        width: 30%;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: var(--blanco2);
+        border: 0.5px solid var(--cafe);
+    }
+
+    #mesaselector {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .productos {
+        padding: 15px;
+        width: 100%;
+
+            input {
+                width: 35%;
+                padding: 10px;
+                border-radius: 20px;
+                border: 1px solid var(--cafe);
+                background-color: var(--blanco2);
+            }
+
+            button {
+                width: 15%;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                background-color: var(--buttonColor);
+                color: white;
+
+                img {
+                    width: 15px;
+                    height: auto;
+                }
+            }
+
+    }
+
+    #cantidad {
+        width: 35%;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid var(--cafe);
+        background-color: var(--blanco2);
+    }
+    form{
+        margin: 15px 0;
+    }
+    .botonescontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+        .volver {
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 100px;
+            background-color: var(--buttonColor);
+            color: white;
+            border: 0;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        #guardar,#agregar {
+            width: 100px;
+            padding: 10px;
+            background-color: var(--buttonColor);
+            border: 0;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        #guardar:hover,
+        .volver:hover {
+            background-color: #000;
+            color: white;
+        }
+    }
+}
+
+#dropdown-content {
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    margin-top: 5px;
+    top: 20%;
+    left: 3%;
+    color: #000;
+}
+
+h3 {
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.mensaje-exito {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}

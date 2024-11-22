@@ -1,0 +1,197 @@
+/* Estilos generales */
+body {
+    background-image: url('../../Fondo/Cajero/FondoCierrePedidos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/* Contenedor principal para centrar el contenido */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    position: static;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 80px;
+}
+
+header img.Icono {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+header img.Icono:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.icono-link {
+    margin-left: auto;
+}
+
+/* Contenedor de los detalles del pedido */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Detalles del pedido */
+.detalles-pedido h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.detalles-pedido ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.detalles-pedido ul li {
+    background-color: #f2f2f2;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.detalles-pedido p {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    color: #9f4c1b;
+}
+
+/* Formulario de cierre de pedido */
+form {
+    margin-top: 30px;
+    text-align: center;
+}
+
+form label {
+    font-size: 18px;
+    color: #333;
+}
+
+form select {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+form button {
+    background-color: #9f4c1b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #803b17;
+    transition: background-color 0.3s ease;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .header h2 {
+        font-size: 40px;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+/* Dropdown para información de usuario */
+#toggle-title {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#toggle-title:hover + #dropdown-content {
+    display: block;
+}
+
+#dropdown-content {
+    display: none;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 1;
+    width: 160px;
+    margin-top: 5px;
+    top: 4%;
+    left: 10%;
+    color: black;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #9f4c1b;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #803b17;
+}

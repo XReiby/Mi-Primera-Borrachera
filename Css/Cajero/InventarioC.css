@@ -1,0 +1,314 @@
+/* Estilos generales */
+body, html {
+    background-image: url('../../Fondo/Cajero/FondoInvC.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/* Contenedor principal para centrar el contenido */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna si es necesario */
+    justify-content: flex-start; /* Cambiar a flex-start para evitar que el contenido esté centrado verticalmente */
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura */
+}
+
+.header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    position: static;
+    top: 0;
+    margin: 0;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 80px;
+}
+
+/* Icono */
+header img.Icono {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+header img.Icono:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.icono-link {
+    margin-left: auto;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 1600px;
+    min-width: max-content;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 3%;
+    height: fit-content;
+}
+
+/* Estilos para el buscador */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-container input {
+    width: 400px; 
+    padding: 10px;
+    border: 2px solid #803b17;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-btn i {
+    font-size: 20px;
+    color: #9f4c1b;
+}
+
+.search-btn:hover i {
+    color: #3e1c10;
+}
+
+/* Estilos de la tabla de inventario */
+table {
+    width: 95%; /* Aumentar el ancho de la tabla */
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+table th,
+table td {
+    padding: 12px 15px; /* Incrementar el padding */
+    border: 1px solid #000000;
+    color: #333;
+    font-size: 18px;
+}
+
+table th {
+    background-color: #9f4c1b;
+    color: white;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilos para formularios de agregar y editar producto */
+.Busqueda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.busqueda-input {
+    width: 350px; /* Ancho del input ajustado */
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #803b17;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Estilos para los botones de acción */
+.button-container {
+    display: flex;  /* Usar flexbox para alinear horizontalmente */
+    justify-content: center;  /* Centrar los botones horizontalmente */
+    margin-top: 20px;  /* Espacio superior */
+}
+
+.action-btn {
+    font-size: 18px;  /* Tamaño de fuente */
+    background-color: #9f4c1b;  /* Color de fondo */
+    color: white;  /* Color del texto */
+    padding: 10px;  /* Espacio interno uniforme en todos los lados */
+    border: none;  /* Sin borde */
+    border-radius: 5px;  /* Bordes redondeados */
+    cursor: pointer;  /* Cursor en forma de puntero al pasar sobre el botón */
+    text-decoration: none;  /* Sin subrayado */
+    display: inline-flex;  /* Usar flex para alinear contenido */
+    align-items: center;  /* Centrar contenido verticalmente */
+    justify-content: center;  /* Centrar contenido horizontalmente */
+    margin: 0 10px;  /* Espacio externo (margin) */
+    font-family: serif;  /* Fuente serif */
+}
+
+.action-btn:hover {
+    background-color: #803b17;  /* Color de fondo al pasar el mouse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* Sombra al pasar el mouse */
+    transform: scale(1.05);  /* Efecto de aumento al pasar el mouse */
+    transition: transform 0.3s ease, background-color 0.3s ease;  /* Transición suave */
+}
+
+/* Estilos para el botón de agregar usuario */
+.add-user {
+    display: flex;  /* Usar flex para alinear horizontalmente */
+    justify-content: center;  /* Centrar contenido horizontalmente */
+    align-items: center;  /* Centrar contenido verticalmente */
+    margin-top: 20px;  /* Espacio superior */
+}
+
+.add-user img {
+    width: 60px;  /* Ancho de la imagen */
+    height: 60px;  /* Alto de la imagen */
+    margin-right: 10px;  /* Espacio entre la imagen y el texto */
+    transition: transform 0.3s ease;  /* Transición suave al hacer hover */
+}
+
+.add-user:hover img {
+    transform: scale(1.2);  /* Aumentar tamaño de la imagen al pasar el mouse */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 100px; /* Reducir margen superior en pantallas pequeñas */
+    }
+
+    .search-container input {
+        width: 90%; /* Aumentar el ancho del buscador en móviles */
+    }
+
+    table {
+        width: 100%; /* Ajustar la tabla en pantallas pequeñas */
+    }
+
+    .action-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+.actions {
+    margin-left: auto;  /* Alinea a la derecha */
+    display: flex;
+    flex-direction: row;  /* Alinear horizontalmente */
+    justify-content: center;  /* Centrar los íconos */
+    gap: 10px;  /* Espacio entre los íconos */
+}
+
+
+.img_Actualizar, .img_Eliminar {
+    cursor: pointer;
+    transition: transform 0.3s ease;  /* Cambiar el efecto a la transformación */
+    display: flex;
+    align-items: center;  /* Centrar verticalmente el contenido */
+    justify-content: center;  /* Centrar horizontalmente el contenido */
+}
+
+/* Aumentar el tamaño del ícono al pasar el mouse */
+.img_Actualizar:hover img, .img_Eliminar:hover img {
+    transform: scale(1.2);  /* Aumentar el tamaño del ícono un poco */
+}
+
+/* Ocultar el texto */
+.img_Actualizar h5, .img_Eliminar h5 {
+    display: none;  /* Ocultar texto */
+}
+
+/* Mantener el ícono centrado */
+.img_Actualizar img, .img_Eliminar img {
+    width: 24px;  /* Ancho de los íconos */
+    height: 24px; /* Alto de los íconos */
+}
+
+/* Estilo mejorado para el desplegable */
+#dropdown-content {
+    display: none; /* Mantiene el dropdown oculto por defecto */
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Mantiene el dropdown en posición absoluta */
+    z-index: 1;
+    width: 160px;
+    margin-top: 5px; /* Espacio entre el botón y el dropdown */
+    top: 4%; /* Cambiar a 0 para alinearlo con el elemento que lo activa */
+    left: 10%; /* Posiciona el dropdown a la derecha del elemento que lo activa */
+    color: black;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+h3 {
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 20px;
+    position: relative;
+}
+
+h3:hover {
+    color: #9f4c1b; /* Cambia a un color diferente en hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #9f4c1b; /* Cambia a un color diferente en hover */
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: #803b17; /* Color al pasar el mouse */
+}
+
+.btn_eliminar{
+    border: none;
+    background: none;
+}

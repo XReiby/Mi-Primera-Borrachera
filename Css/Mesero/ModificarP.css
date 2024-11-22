@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+    --blanco1: rgba(255, 255, 255, 0.3);
+    --blanco2: rgba(255, 255, 255, 0.7);
+    --cafe: #803b17;
+    --buttonColor: rgb(121, 25, 1);
+    --negro1: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+body {
+    background-image: url(../../Fondo/Cajero/FondoCierrePedidos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container {
+    width: 80%;
+    margin: auto;
+}
+
+main {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    img {
+        width: 100px;
+        height: auto;
+        background-color: var(--negro1);
+        border-radius: 50%;
+        padding: 10px;
+
+        &:hover {
+            transform: scale(1.02);
+            transition: 0.3s;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 15px;
+        border-radius: 20px;
+        text-shadow: 1px 0 0 #803b17;
+    }
+
+    h3 {
+        background-color: rgba(0, 0, 0, 0.15);
+        text-align: center;
+        color: white;
+        padding: 15px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.3);
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+table {
+    width: 70%;
+    margin: 15px auto;
+    background-color: var(--blanco2);
+    border-collapse: collapse;
+    text-align: center;
+
+    thead {
+        font-weight: 700;
+    }
+
+    th {
+        background-color: var(--cafe);
+        color: white;
+    }
+
+    td {
+        padding: 10px; /* Added padding for better spacing */
+    }
+
+    button {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+            transition: background-color 0.3s ease;
+            transform: translateY(-1.2px);
+        }
+    }
+}
+
+#form-pedido{
+    width: 100%;
+}
+
+#producto-nuevo,#cantidad-nuevo{
+    width: 30%;
+}
+
+table tr
+.cantidad-producto{
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    border-bottom: 1px solid #803b17;
+    text-align: center;
+    width: 80%;
+}
+
+.botonescontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .volver,
+    .guardar,
+    .agregar {
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        background-color: var(--buttonColor);
+        color: white;
+        border: 0;
+        border-radius: 20px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+
+    .guardar:hover,
+    .agregar:hover,
+    .volver:hover {
+        background-color: #000;
+        color: white;
+    }
+}
+
+h3 {
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+select {
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--blanco2);
+    border: 0.5px solid var(--cafe);
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+input[type="number"] {
+    width: 35%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--cafe);
+    background-color: var(--blanco2);
+}
+
+#dropdown-content {
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    margin-top: 5px;
+    top: 20%;
+    left: 3%;
+    color: #000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
